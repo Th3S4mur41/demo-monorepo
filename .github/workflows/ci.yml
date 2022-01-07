@@ -26,11 +26,12 @@ jobs:
         with:
           check-latest: true
           cache: 'npm'
+          registry-url: https://npm.pkg.github.com/
+          scope: '@th3s4mur41'
 
       - name: '⛓️ Install dependencies'
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: npm ci --no-optional --no-audit --prefer-offline --progress=false
 
       - name: '🛠️ Build'
@@ -49,11 +50,12 @@ jobs:
         with:
           check-latest: true
           cache: 'npm'
+          registry-url: https://npm.pkg.github.com/
+          scope: '@th3s4mur41'
 
       - name: '⛓️ Install dependencies'
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: npm ci --no-optional --no-audit --prefer-offline --progress=false
 
       - name: '✅ Lint code'
