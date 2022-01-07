@@ -1,0 +1,60 @@
+name: CI
+
+# Controls when the action will run.
+on:
+  # Triggers the workflow on push or pull request events but only for specified branches.
+  push:
+    branches: [main, next, beta, alpha]
+  pull_request_target:
+    # The branches below must be a subset of the branches above
+    types: [opened, synchronize, reopened]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: '🛠️ Build'
+    runs-on: ubuntu-latest
+    container: node:lts-bullseye
+
+    steps:
+      - name: '☁️ Checkout repository'
+        uses: actions/checkout@v2
+
+      - name: '⚙️ Use Node.js'
+        uses: actions/setup-node@v2
+        with:
+          check-latest: true
+          cache: 'npm'
+
+      - name: '⛓️ Install dependencies'
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: npm ci --no-optional --no-audit --prefer-offline --progress=false
+
+      - name: '🛠️ Build'
+        run: npm run build
+
+  lint:
+    name: '🕵️‍♂️ Lint'
+    runs-on: ubuntu-latest
+    container: node:lts-bullseye
+
+    steps:
+      - name: '☁️ Checkout repository'
+        uses: actions/checkout@v2
+
+      - name: '⚙️ Use Node.js'
+        uses: actions/setup-node@v2
+        with:
+          check-latest: true
+          cache: 'npm'
+
+      - name: '⛓️ Install dependencies'
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: npm ci --no-optional --no-audit --prefer-offline --progress=false
+
+      - name: '✅ Lint code'
+        run: npm run lint

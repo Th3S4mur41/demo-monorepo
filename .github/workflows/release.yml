@@ -1,0 +1,58 @@
+name: 'Release'
+
+on:
+  push:
+    branches:
+      - main
+      - next
+      - beta
+      - alpha
+
+  workflow_dispatch:
+
+jobs:
+  release:
+    name: '🏷️ Release'
+    runs-on: ubuntu-latest
+    container: node:lts-bullseye
+    environment:
+      name: production
+      url: https://github.com/${{ github.repository }}/releases/tag/v${{ steps.release.outputs.version }}
+
+    permissions:
+      contents: write
+      packages: write
+
+    steps:
+      - name: '☁️ Checkout repository'
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: '⚙️ Use Node.js'
+        uses: actions/setup-node@v2
+        with:
+          check-latest: true
+          cache: 'npm'
+
+      - name: '⛓️ Install dependencies'
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: npm ci --no-optional --no-audit --prefer-offline --progress=false
+
+      - name: '🛠️ Build'
+        run: npm run build
+
+      - name: '📦 Release'
+        id: release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          HUSKY: 0 # disable pre-commit hooks
+        run: |
+          npm run release
+          echo "::set-output name=version::$(npm run env | grep npm_package_version | cut -d '=' -f 2)"
+
+  # TODO: Deploy to Github pages
