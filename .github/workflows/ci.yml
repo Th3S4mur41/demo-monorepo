@@ -16,7 +16,6 @@ jobs:
   build:
     name: '🛠️ Build'
     runs-on: ubuntu-latest
-    container: node:lts-bullseye
 
     steps:
       - name: '☁️ Checkout repository'
@@ -37,7 +36,6 @@ jobs:
   lint:
     name: '🕵️‍♂️ Lint'
     runs-on: ubuntu-latest
-    container: node:lts-bullseye
 
     steps:
       - name: '☁️ Checkout repository'
