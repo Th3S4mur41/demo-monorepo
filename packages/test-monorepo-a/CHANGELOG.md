@@ -1,3 +1,10 @@
+# @th3s4mur41/test-monorepo-a [1.2.0](https://github.com/Th3S4mur41/monorepo/compare/@th3s4mur41/test-monorepo-a@1.1.0...@th3s4mur41/test-monorepo-a@1.2.0) (2022-01-07)
+
+
+### Features
+
+* **a:** force release ([eee4c17](https://github.com/Th3S4mur41/monorepo/commit/eee4c17435eb5d6546a25d84da2f5f613fe293ef))
+
 # @th3s4mur41/test-monorepo-a [1.1.0](https://github.com/Th3S4mur41/monorepo/compare/@th3s4mur41/test-monorepo-a@1.0.0...@th3s4mur41/test-monorepo-a@1.1.0) (2022-01-07)
 
 
