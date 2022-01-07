@@ -2,4 +2,4 @@
 
 A test repository for everything related to monorepos
 
-Update 1
+Update 2
