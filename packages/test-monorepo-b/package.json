@@ -14,5 +14,24 @@
 		"start": "echo start",
 		"test": "echo no tests available"
 	},
-	"devDependencies": {}
+	"dependencies": {
+		"lit": "^2.5.0"
+	},
+	"devDependencies": {
+		"@babel/core": "^7.20.7",
+		"@percy/storybook": "^4.3.4",
+		"@storybook/addon-a11y": "^6.5.15",
+		"@storybook/addon-actions": "6.5.15",
+		"@storybook/addon-docs": "6.5.15",
+		"@storybook/addon-essentials": "6.5.15",
+		"@storybook/addon-links": "6.5.15",
+		"@storybook/addon-postcss": "^2.0.0",
+		"@storybook/addons": "6.5.15",
+		"@storybook/builder-vite": "0.2.5",
+		"@storybook/theming": "6.5.15",
+		"@storybook/web-components": "6.5.15",
+		"babel-loader": "^9.1.0",
+		"postcss": "^8.4.20",
+		"storybook-addon-designs": "^6.3.1"
+	}
 }
