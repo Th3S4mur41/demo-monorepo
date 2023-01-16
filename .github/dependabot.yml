@@ -4,8 +4,23 @@
 # https://help.github.com/github/administering-a-repository/configuration-options-for-dependency-updates
 
 version: 2
+
+registries:
+  atos-parallel:
+    type: npm-registry
+    url: https://npm.pkg.github.com
+    token: ${{secrets.DEPENDABOT_TOKEN}}
+
 updates:
   - package-ecosystem: 'npm'
+    directory: '/' # Location of package manifests
+    registries: '*'
+    schedule:
+      interval: 'weekly'
+    reviewers:
+      - 'Th3S4mur41'
+
+  - package-ecosystem: 'github-actions'
     directory: '/' # Location of package manifests
     schedule:
       interval: 'weekly'
