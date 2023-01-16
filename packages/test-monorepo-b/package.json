@@ -31,7 +31,7 @@
 		"@storybook/theming": "6.5.15",
 		"@storybook/web-components": "6.5.15",
 		"babel-loader": "^9.1.2",
-		"postcss": "^8.4.20",
+		"postcss": "^8.4.21",
 		"storybook-addon-designs": "^6.3.1"
 	}
 }
