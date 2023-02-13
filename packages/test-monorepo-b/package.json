@@ -27,7 +27,7 @@
 		"@storybook/addon-links": "6.5.16",
 		"@storybook/addon-postcss": "^2.0.0",
 		"@storybook/addons": "6.5.16",
-		"@storybook/builder-vite": "^0.3.0",
+		"@storybook/builder-vite": "^0.4.2",
 		"@storybook/theming": "6.5.16",
 		"@storybook/web-components": "6.5.16",
 		"babel-loader": "^9.1.2",
