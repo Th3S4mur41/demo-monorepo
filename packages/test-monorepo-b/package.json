@@ -15,7 +15,7 @@
 		"test": "echo no tests available"
 	},
 	"dependencies": {
-		"lit": "^2.6.1"
+		"lit": "^2.7.3"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.20.12",
