@@ -22,7 +22,7 @@
 		"@percy/storybook": "^4.3.5",
 		"@storybook/addon-a11y": "^6.5.16",
 		"@storybook/addon-actions": "6.5.16",
-		"@storybook/addon-docs": "6.5.16",
+		"@storybook/addon-docs": "7.4.6",
 		"@storybook/addon-essentials": "6.5.16",
 		"@storybook/addon-links": "6.5.16",
 		"@storybook/addon-postcss": "^2.0.0",
