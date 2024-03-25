@@ -18,7 +18,7 @@
 		"lit": "^3.1.2"
 	},
 	"devDependencies": {
-		"@babel/core": "^7.24.0",
+		"@babel/core": "^7.24.3",
 		"@percy/storybook": "^5.0.1",
 		"@storybook/addon-a11y": "^8.0.0",
 		"@storybook/addon-actions": "8.0.0",
