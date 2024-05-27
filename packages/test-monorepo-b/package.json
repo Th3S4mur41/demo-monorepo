@@ -19,7 +19,7 @@
 	},
 	"devDependencies": {
 		"@babel/core": "^7.24.5",
-		"@percy/storybook": "^5.0.3",
+		"@percy/storybook": "^6.0.0",
 		"@storybook/addon-a11y": "^8.1.1",
 		"@storybook/addon-actions": "8.1.1",
 		"@storybook/addon-docs": "8.1.1",
