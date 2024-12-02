@@ -28,7 +28,7 @@
 		"@semantic-release/git": "^10.0.1",
 		"@th3s4mur41/config-release": "^1.0.0",
 		"husky": "^9.1.6",
-		"prettier": "^3.3.3",
+		"prettier": "^3.4.1",
 		"pretty-quick": "^4.0.0"
 	},
 	"dependencies": {}
